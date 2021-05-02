@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "font-sidebar";
+    src: url('fonts/JetBrainsMono-Bold.ttf');
+}
+
+@font-face {
+    font-family: "font-my-name";
+    src: url('fonts/SourceCodePro-Semibold.otf');
+}
+
+@font-face {
+    font-family: "font-content";
+    src: url('fonts/JetBrainsMono-Medium.ttf');
+}
+
+@font-face {
+    font-family: "font-desc";
+    src: url('fonts/JosefinSans-Light.ttf');
+}
+
+@font-face {
+    font-family: "font-project";
+    src: url('fonts/BubblegumSans-Regular.otf');
+}
+
+@font-face {
+    font-family: "font-exp";
+    src: url('fonts/JetBrainsMono-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "font-port";
+    src: url('fonts/sinkin-sans/SinkinSans-500Medium.otf');
+}
