@@ -57,6 +57,45 @@
             transform: translate(-50%, -50%);
             font: 14px arial;
         }
+
+        .container-overlay {
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.521);
+            transition: background 0.5s ease;
+            background: rgba(0, 0, 0, 0.521);
+        }
+
+        .container-overlay:hover .overlay {
+            display: block;
+            background: rgba(0, 0, 0, 0.055);
+        }
+
+        .portfolio-name {
+            position: absolute;
+            width: 500px;
+            left: 0;
+            top: 120px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            z-index: 1;
+            transition: top .5s ease;
+        }
+
+        .container-overlay:hover .portfolio-name {
+            top: 90px;
+            color: white;
+        }
     </style>
 
     <script src="assets/vendor/jquery/jquery.min.js "></script>
@@ -96,7 +135,7 @@
                     <a href="https://web.facebook.com/izal.whanz/" class="facebook"><i class="bx bxl-facebook"></i></a>
                     <a href="https://t.me/ihw_me/" class="twitter"><i class="bx bxl-telegram"></i></a>
                     <a href="https://github.com/rizalihwan" class="google-plus"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/rizal-ihwan-98a8a9199/" class="linkedin"><i
+                    <a href="https://www.linkedin.com/in/rizal-ihwan-sulaiman/" class="linkedin"><i
                             class="bx bxl-linkedin"></i></a>
                 </div>
                 <nav class="nav-menu">
@@ -134,7 +173,8 @@
                         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                             <p style="font-size: 20px; font-family: 'font-desc';">Perkenalkan nama saya <b>Rizal Ihwan
                                     Sulaiman</b>, yang saat ini sedang bergelut di dunia programming terutama pada
-                                bagian web development. Saya sangat familiar dengan framework <b>Laravel/Lumen</b> dan baik
+                                bagian web development. Saya sangat familiar dengan framework <b>Laravel/Lumen</b> dan
+                                baik
                                 dalam mengoperasikan
                                 database. Saat ini saya sedang menyelesaikan project - project freelance dan pernah
                                 terlibat dalam project magang di PT Laskar Teknologi Mulia(CyberLabs). Saya sangat
@@ -331,390 +371,231 @@
                     <center>
                         <!-- background-color: #0f4c75;  -->
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/perpus/2.png"
-                                    style="height: 11rem; object-position: top; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Perpustakaan">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Perpustakaan</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 80px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">PostgreSQL</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">TailwindCSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">jQuery
-                                            Ajax</span>
+                            <a href="#" data-toggle="modal" data-target="#akuntingModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/akunting/1.png" alt="Akunting"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Aplikasi
+                                                Keuangan
+                                                TNI
+                                                AD</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#perpusModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/perpustakaan" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/absensiswa/8.png"
-                                    style="height: 11rem; object-position: top; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Perpustakaan">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Absensi Digital
-                                        Siswa</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQL</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">WebcamJS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">jQuery
-                                            Ajax</span>
+                            <a href="#" data-toggle="modal" data-target="#perpusModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/perpus/2.png" alt="Perpustakaan"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Aplikasi
+                                                Perpustakaan</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#absiswaModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/perpustakaan" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/tropisi/3.png"
-                                    style="height: 11rem; object-position: top; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Company Profile">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Tropisianimal
-                                        Company</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 68px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CKeditor</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Materialize</span>
+                            <a href="#" data-toggle="modal" data-target="#tropisModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/tropisi/3.png" alt="Tropisianimal company profile"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Tropisianimal
+                                                Company</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#tropisModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/tropisi-animal" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/Supervisor Digital/3.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Supervisor Digital">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Supervisor Digital</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
+                            <a href="#" data-toggle="modal" data-target="#absiswaModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/absensiswa/8.png" alt="Absensi"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Absensi
+                                                Digital
+                                                Siswa</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#supervisorModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/LARAVEL-SupervisorDigital" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/BordirKuy profile/1.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Bordirollshop Landing Page">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Bordirollshop Landing
-                                        Page</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 80px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Javascript</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
+                            <a href="#" data-toggle="modal" data-target="#supervisorModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/Supervisor Digital/3.png" alt="Supervisor Digital"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Supervisor
+                                                Digital</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#bordirModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/bordir-ollshop" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/POS/4.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Point Of Sale">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Point Of Sale</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 80px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Javascript</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Materialize</span>
+                            <a href="#" data-toggle="modal" data-target="#bordirModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/BordirKuy profile/2.png" alt="Bordirollshop Landing
+                                                Page"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Bordirollshop
+                                                Landing Page</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#posModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/point-of-sale" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/Ppdb Online/1.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="PPDB Online">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">PPDB Online</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
+                            <a href="#" data-toggle="modal" data-target="#posModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/POS/4.png" alt="Point Of Sale"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Point
+                                                Of Sale</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#ppdbModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/LARAVEL-PPDBOnline" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/absensi/4.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Absensi Karyawan">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Absensi Karyawan</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
+                            <a href="#" data-toggle="modal" data-target="#ppdbModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/Ppdb Online/1.png" alt="PPDB Online"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">PPDB
+                                                Online</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#absensiModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/absensi-karyawan" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/Covid_RiskTest/1.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Covid Risk Test">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Covid Risk Test</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">PHP</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 80px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Javascript</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
+                            <a href="#" data-toggle="modal" data-target="#absensiModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/absensi/4.png" alt="Absensi Karyawan"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Absensi
+                                                Karyawan</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#covidModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/PhpNative-CovidRiskTest" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/silsilah/1.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Silsilah">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Silsilah Keluarga</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">PHP</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 80px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Javascript</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
+                            <a href="#" data-toggle="modal" data-target="#covidModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/Covid_RiskTest/1.png" alt="Covid Risk Test"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Covid
+                                                Risk Test</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#silsilahModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/silsilah" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/simrs/2.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="SIMRS">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">SIMRS</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
+                            <a href="#" data-toggle="modal" data-target="#silsilahModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/silsilah/1.png" alt="Silsilah Keluarga"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Silsilah
+                                                Keluarga</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#simrsModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/LARAVEL-SIMRS" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/Crud Laravel (AgendaDigital)/1.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="Agenda List">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">Agenda List</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 60px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Laravel</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 75px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Bootstrap</span>
+                            <a href="#" data-toggle="modal" data-target="#simrsModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/simrs/2.png" alt="SIMRS"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">SIMRS</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#agendaModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/LARAVEL-AgendaDigital" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         <div class="col-md-6 portfolio-item">
-                            <div class="card p-1"
-                                style="width: 100%; height: 24.5rem; background: linear-gradient(#1e3c72, #2a5298);">
-                                <img src="assets/img/port/E-Ticketing/2.png"
-                                    style="height: 11rem; object-position: left; width: 100%; object-fit: cover;"
-                                    class="card-img-top" alt="E-Ticketing">
-                                <div class="card-body my-2">
-                                    <label style="font-size: 1rem; font-family: 'font-port';">E-Ticketing</label>
-                                    <div class="my-2">
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">PHP</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 50px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">MySQl</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 80px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">Javascript</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 30px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">CSS</span>
-                                        <span class="badge badge-light mt-2"
-                                            style="width: 85px; height: 20px; font-size: 0.7rem; color: blue; font-family: 'font-content'">jQuery
-                                            Ajax</span>
+                            <a href="#" data-toggle="modal" data-target="#agendaModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/Crud Laravel (AgendaDigital)/1.png"
+                                                alt="Agenda List"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Agenda
+                                                List</label>
+                                        </center>
+                                        <div class="overlay"></div>
                                     </div>
-                                    <hr>
-                                    <a href="#" data-toggle="modal" data-target="#ticketingModal" class="btn btn-sm"
-                                        style="background-color: #00af91; color: white;" title="Detail"><i
-                                            class="far fa-eye"></i></a> |
-                                    <a href="https://github.com/rizalihwan/PhpNative-ETicketing" class="btn btn-sm"
-                                        style="background-color: #ff4646; color: white;" title="Code"><i
-                                            class="fa fa-code"></i></a>
                                 </div>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 portfolio-item">
+                            <a href="#" data-toggle="modal" data-target="#ticketingModal" title="Detail">
+                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
+                                    <div class="container-overlay">
+                                        <center>
+                                            <img src="assets/img/port/E-Ticketing/2.png" alt="E-Ticketing"
+                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
+                                            <label class="portfolio-name text-left"
+                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">E-Ticketing</label>
+                                        </center>
+                                        <div class="overlay"></div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </center>
                 </div>
@@ -841,691 +722,782 @@
     <!-- End #main -->
 
     <!-- Portfolio Modal -->
-    <!-- perpus -->
-    <div class="modal fade" id="perpusModal" tabindex="-1" aria-labelledby="perpusModalLabel">
+    <!-- akunting -->
+    <div class="modal fade" id="akuntingModal" tabindex="-1" aria-labelledby="akuntingModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body my-2" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/perpus/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/7.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/8.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/9.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
-                        <img src="assets/img/port/perpus/10.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="perpus">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/akunting/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="akunting">
+                            <img src="assets/img/port/akunting/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="akunting">
+                            <img src="assets/img/port/akunting/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="akunting">
+                            <img src="assets/img/port/akunting/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="akunting">
+                            <img src="assets/img/port/akunting/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="akunting">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Perpustakaan]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website yang dibuat untuk memudahkan
-                        peminjaman & pengembalian Buku di Perpustakaan. Dan sekaligus project ini saya buat open source
-                        untuk dipelajari untuk semua orang dan sudah tersedia di github saya.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Aplikasi Keuangan/Akunting TNI
+                            AD]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website yang dibuat untuk
+                            memudahkan Transaksi seputar Akuntansi dan mencatat laporan - laporan berdasarkan module
+                            seperti Laba Rugi, Neraca, Jurnal Umum dll.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
+                        <!-- <center> -->
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <!-- </center> -->
+                    </div>
                 </div>
-            </div>
+            </center>
+        </div>
+    </div>
+    <!-- perpus -->
+    <div class="modal fade" id="perpusModal" tabindex="-1" aria-labelledby="perpusModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
+                    <div class="my-2 mt-3">
+                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
+                            id="modal-title">Detail Portfolio</strong>
+                    </div>
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/perpus/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/7.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/8.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/9.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                            <img src="assets/img/port/perpus/10.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="perpus">
+                        </div>
+                    </div>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Perpustakaan]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website yang dibuat untuk
+                            memudahkan
+                            peminjaman & pengembalian Buku di Perpustakaan. Dan sekaligus project ini saya buat open
+                            source
+                            untuk dipelajari untuk semua orang dan sudah tersedia di github saya.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
+                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
+                            style="width: 10rem;">Kembali</button>
+                        <a href="https://github.com/rizalihwan/perpustakaan" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
+                </div>
+            </center>
         </div>
     </div>
     <!-- tropisianimal -->
-    <div class="modal fade" id="tropisModal" tabindex="-1" aria-labelledby="tropisModalLabel">
+    <div class="modal fade" id="tropisModal" tabindex="-1" aria-labelledby="tropisModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/tropisi/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/7.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/8.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/9.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/10.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/11.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/12.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/13.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/14.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
-                        <img src="assets/img/port/tropisi/15.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="tropisi">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/tropisi/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/7.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/8.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/9.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/10.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/11.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/12.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/13.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/14.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                            <img src="assets/img/port/tropisi/15.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="tropisi">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Tropisianimal Company Profile]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website Tropisianimal company
-                        profile ini dibuat untuk lebih memperkenalkan budidaya hewan yang di urusi oleh perusahaan
-                        tropisianimal agar lebih banyak dikenal orang. Dan ini merupakan salah satu project magang saya
-                        di cyberlabs.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Tropisianimal Company
+                            Profile]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website Tropisianimal company
+                            profile ini dibuat untuk lebih memperkenalkan budidaya hewan yang di urusi oleh perusahaan
+                            tropisianimal agar lebih banyak dikenal orang. Dan ini merupakan salah satu project magang
+                            saya
+                            di cyberlabs.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/tropisi-animal" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- supervisor -->
-    <div class="modal fade" id="supervisorModal" tabindex="-1" aria-labelledby="supervisorModalLabel">
+    <div class="modal fade" id="supervisorModal" tabindex="-1" aria-labelledby="supervisorModalLabel"
+        data-toggle="modal" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/Supervisor Digital/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="supervisor">
-                        <img src="assets/img/port/Supervisor Digital/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="supervisor">
-                        <img src="assets/img/port/Supervisor Digital/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="supervisor">
-                        <img src="assets/img/port/Supervisor Digital/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="supervisor">
-                        <img src="assets/img/port/Supervisor Digital/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="supervisor">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/Supervisor Digital/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="supervisor">
+                            <img src="assets/img/port/Supervisor Digital/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="supervisor">
+                            <img src="assets/img/port/Supervisor Digital/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="supervisor">
+                            <img src="assets/img/port/Supervisor Digital/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="supervisor">
+                            <img src="assets/img/port/Supervisor Digital/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="supervisor">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Supervisor Digital]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Aplikasi Supervisor Digital ini
-                        dibuat untuk menghandle sistem pembelajaran sekolah secara online sehingga guru dapat memberi
-                        tugas secara mudah dan efektif. Dan sudah dilengkapi fitur menilai tugas yang diberikan oleh
-                        guru buat role supervisornya & fitur laporan untuk dilihat oleh kepala sekolah, dan masih banyak
-                        lagi fiturnya.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Supervisor Digital]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Aplikasi Supervisor Digital ini
+                            dibuat untuk menghandle sistem pembelajaran sekolah secara online sehingga guru dapat
+                            memberi
+                            tugas secara mudah dan efektif. Dan sudah dilengkapi fitur menilai tugas yang diberikan oleh
+                            guru buat role supervisornya & fitur laporan untuk dilihat oleh kepala sekolah, dan masih
+                            banyak
+                            lagi fiturnya.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/supervisor-digital" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- bordir -->
-    <div class="modal fade" id="bordirModal" tabindex="-1" aria-labelledby="bordirModalLabel">
+    <div class="modal fade" id="bordirModal" tabindex="-1" aria-labelledby="bordirModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/BordirKuy profile/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="bordir">
-                        <img src="assets/img/port/BordirKuy profile/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="bordir">
-                        <img src="assets/img/port/BordirKuy profile/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="bordir">
-                        <img src="assets/img/port/BordirKuy profile/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="bordir">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/BordirKuy profile/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="bordir">
+                            <img src="assets/img/port/BordirKuy profile/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="bordir">
+                            <img src="assets/img/port/BordirKuy profile/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="bordir">
+                            <img src="assets/img/port/BordirKuy profile/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="bordir">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Bordirollshop Landing Page]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website Bordirollshop Landing Page
-                        ini dibuat untuk lebih memperkenalkan jasa bordir nya agar dapat semua orang lihat secara mudah
-                        dimanapun dan kapanpun.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Bordirollshop Landing Page]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website Bordirollshop Landing
+                            Page
+                            ini dibuat untuk lebih memperkenalkan jasa bordir nya agar dapat semua orang lihat secara
+                            mudah
+                            dimanapun dan kapanpun.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/bordir-ollshop" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- pos -->
-    <div class="modal fade" id="posModal" tabindex="-1" aria-labelledby="posModalLabel">
+    <div class="modal fade" id="posModal" tabindex="-1" aria-labelledby="posModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/POS/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/7.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/8.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
-                        <img src="assets/img/port/POS/9.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;" alt="pos">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/POS/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/7.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/8.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                            <img src="assets/img/port/POS/9.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="pos">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Point Of Sale]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Sesuai dengan namanya, sistem POS
-                        (Point of Sale) adalah titik penjualan di mana transaksi penjualan diselesaikan. Sistem ini juga
-                        sering disebut sebagai mesin kasir (cash register). Sistem ini pada dasarnya dibuat untuk
-                        mempermudah proses penjualan (atau pembelian) dalam bisnis retail, sehingga pelanggan dapat
-                        melakukan pembayaran dengan lebih cepat.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Point Of Sale]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Sesuai dengan namanya, sistem
+                            POS
+                            (Point of Sale) adalah titik penjualan di mana transaksi penjualan diselesaikan. Sistem ini
+                            juga
+                            sering disebut sebagai mesin kasir (cash register). Sistem ini pada dasarnya dibuat untuk
+                            mempermudah proses penjualan (atau pembelian) dalam bisnis retail, sehingga pelanggan dapat
+                            melakukan pembayaran dengan lebih cepat.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/point-of-sale" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- ppdb -->
-    <div class="modal fade" id="ppdbModal" tabindex="-1" aria-labelledby="ppdbModalLabel">
+    <div class="modal fade" id="ppdbModal" tabindex="-1" aria-labelledby="ppdbModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/Ppdb Online/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Ppdb Online">
-                        <img src="assets/img/port/Ppdb Online/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Ppdb Online">
-                        <img src="assets/img/port/Ppdb Online/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Ppdb Online">
-                        <img src="assets/img/port/Ppdb Online/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Ppdb Online">
-                        <img src="assets/img/port/Ppdb Online/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Ppdb Online">
-                        <img src="assets/img/port/Ppdb Online/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Ppdb Online">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/Ppdb Online/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Ppdb Online">
+                            <img src="assets/img/port/Ppdb Online/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Ppdb Online">
+                            <img src="assets/img/port/Ppdb Online/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Ppdb Online">
+                            <img src="assets/img/port/Ppdb Online/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Ppdb Online">
+                            <img src="assets/img/port/Ppdb Online/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Ppdb Online">
+                            <img src="assets/img/port/Ppdb Online/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Ppdb Online">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[PPDB Online]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">PPDB Online merupakan website
-                        sekolah yang dibuat untuk memudahkan penerimaan siswa/i baru secara digital. Dan didalamnya
-                        terdapat informasi dan konten - konten mengenai sekolah tersebut.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[PPDB Online]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">PPDB Online merupakan website
+                            sekolah yang dibuat untuk memudahkan penerimaan siswa/i baru secara digital. Dan didalamnya
+                            terdapat informasi dan konten - konten mengenai sekolah tersebut.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/LARAVEL-PPDBOnline" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- sisliah -->
-    <div class="modal fade" id="silsilahModal" tabindex="-1" aria-labelledby="silsilahModalLabel">
+    <div class="modal fade" id="silsilahModal" tabindex="-1" aria-labelledby="silsilahModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/silsilah/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="silsilah">
-                        <img src="assets/img/port/silsilah/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="silsilah">
-                        <img src="assets/img/port/silsilah/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="silsilah">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/silsilah/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="silsilah">
+                            <img src="assets/img/port/silsilah/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="silsilah">
+                            <img src="assets/img/port/silsilah/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="silsilah">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Silsilah Keluarga]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Silsilah Keluarga merupakan website
-                        yang dibuat - buat saja untuk menentukan silsilah dalam sebuah keluarga, dan project ini saya
-                        buat untuk melatih logika if conditional dan pematangan relational database saya.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Silsilah Keluarga]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Silsilah Keluarga merupakan
+                            website
+                            yang dibuat - buat saja untuk menentukan silsilah dalam sebuah keluarga, dan project ini
+                            saya
+                            buat untuk melatih logika if conditional dan pematangan relational database saya.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/silsilah" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- absensi siswa -->
-    <div class="modal fade" id="absiswaModal" tabindex="-1" aria-labelledby="absiswaModalLabel">
+    <div class="modal fade" id="absiswaModal" tabindex="-1" aria-labelledby="absiswaModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/absensiswa/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: bottom left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/7.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
-                        <img src="assets/img/port/absensiswa/8.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="absensi siswa">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/absensiswa/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: bottom left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/7.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                            <img src="assets/img/port/absensiswa/8.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="absensi siswa">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Absensi Digital Siswa]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website ini dibuat untuk membantu
-                        guru dalam proses pengabsenan siswa secara digital, dan terdaftar fitur selfi menggunakan camera
-                        ketika siswa akan melakukan absen, dan ketika absen akan terekap otomatis tanggal dan jam berapa
-                        siswa tersebut melakukan absensi.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Absensi Digital Siswa]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website ini dibuat untuk
+                            membantu
+                            guru dalam proses pengabsenan siswa secara digital, dan terdaftar fitur selfi menggunakan
+                            camera
+                            ketika siswa akan melakukan absen, dan ketika absen akan terekap otomatis tanggal dan jam
+                            berapa
+                            siswa tersebut melakukan absensi.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
-    <!-- absensi -->
-    <div class="modal fade" id="absensiModal" tabindex="-1" aria-labelledby="absensiModalLabel">
+    <!-- absensi karyawan -->
+    <div class="modal fade" id="absensiModal" tabindex="-1" aria-labelledby="absensiModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/absensi/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Absensi Karyawan">
-                        <img src="assets/img/port/absensi/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Absensi Karyawan">
-                        <img src="assets/img/port/absensi/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Absensi Karyawan">
-                        <img src="assets/img/port/absensi/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Absensi Karyawan">
-                        <img src="assets/img/port/absensi/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Absensi Karyawan">
-                        <img src="assets/img/port/absensi/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Absensi Karyawan">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/absensi/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Absensi Karyawan">
+                            <img src="assets/img/port/absensi/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Absensi Karyawan">
+                            <img src="assets/img/port/absensi/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Absensi Karyawan">
+                            <img src="assets/img/port/absensi/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Absensi Karyawan">
+                            <img src="assets/img/port/absensi/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Absensi Karyawan">
+                            <img src="assets/img/port/absensi/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Absensi Karyawan">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Absensi Karyawan]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Seperti namanya yaitu absensi jadi
-                        aplikasi website ini dibuat untuk memudahkan absensi karyawan setiap hari nya, dan terdapat
-                        fitur generate laporan yang sangat penting untuk di akses oleh Direktur.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Absensi Karyawan]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Seperti namanya yaitu absensi
+                            jadi
+                            aplikasi website ini dibuat untuk memudahkan absensi karyawan setiap hari nya, dan terdapat
+                            fitur generate laporan yang sangat penting untuk di akses oleh Direktur.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/absensi-karyawan" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- covid -->
-    <div class="modal fade" id="covidModal" tabindex="-1" aria-labelledby="covidModalLabel">
+    <div class="modal fade" id="covidModal" tabindex="-1" aria-labelledby="covidModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/Covid_RiskTest/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Covid Risk Test">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/Covid_RiskTest/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Covid Risk Test">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Covid Risk Test]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website ini dibuat untuk mengetahui
-                        seberapa jauh anda terkena dampak resiko virus corona.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Covid Risk Test]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website ini dibuat untuk
+                            mengetahui
+                            seberapa jauh anda terkena dampak resiko virus corona.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/covid-risk-test" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- simrs -->
-    <div class="modal fade" id="simrsModal" tabindex="-1" aria-labelledby="simrsModalLabel">
+    <div class="modal fade" id="simrsModal" tabindex="-1" aria-labelledby="simrsModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/simrs/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/7.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/8.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
-                        <img src="assets/img/port/simrs/9.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Sistem Management RS">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/simrs/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/7.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/8.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                            <img src="assets/img/port/simrs/9.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Sistem Management RS">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Sistem Informasi Management Rumah
-                        Sakit]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">SIMRS ini dibuat untuk memudahkan
-                        dan memanajemen sistem informasi yang ada di Rumah Sakit.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Sistem Informasi Management Rumah
+                            Sakit]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">SIMRS ini dibuat untuk
+                            memudahkan
+                            dan memanajemen sistem informasi yang ada di Rumah Sakit.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/simrs" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- agenda -->
-    <div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModalLabel">
+    <div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/Crud Laravel (AgendaDigital)/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Agenda List">
-                        <img src="assets/img/port/Crud Laravel (AgendaDigital)/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="Agenda List">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/Crud Laravel (AgendaDigital)/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Agenda List">
+                            <img src="assets/img/port/Crud Laravel (AgendaDigital)/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="Agenda List">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[Agenda List]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">Aplikasi website yang dibuat untuk
-                        mencatat agenda secara digital.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Agenda List]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Aplikasi website yang dibuat
+                            untuk
+                            mencatat agenda secara digital.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/agenda-digital" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
     <!-- ticketing -->
-    <div class="modal fade" id="ticketingModal" tabindex="-1" aria-labelledby="ticketingModalLabel">
+    <div class="modal fade" id="ticketingModal" tabindex="-1" aria-labelledby="ticketingModalLabel" data-toggle="modal"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                <center>
+            <center>
+                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
                     <div class="my-2 mt-3">
                         <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
                             id="modal-title">Detail Portfolio</strong>
                     </div>
-                </center>
-                <hr>
-                <div class="modal-body" id="modal-body">
-                    <div class="owl-carousel portfolio-details-carousel">
-                        <img src="assets/img/port/E-Ticketing/1.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
-                        <img src="assets/img/port/E-Ticketing/2.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
-                        <img src="assets/img/port/E-Ticketing/3.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
-                        <img src="assets/img/port/E-Ticketing/4.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
-                        <img src="assets/img/port/E-Ticketing/5.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
-                        <img src="assets/img/port/E-Ticketing/6.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
-                        <img src="assets/img/port/E-Ticketing/7.png"
-                            style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                            alt="E-Ticketing">
+                    <hr>
+                    <div class="modal-body my-2" id="modal-body">
+                        <div class="owl-carousel portfolio-details-carousel">
+                            <img src="assets/img/port/E-Ticketing/1.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                            <img src="assets/img/port/E-Ticketing/2.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                            <img src="assets/img/port/E-Ticketing/3.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                            <img src="assets/img/port/E-Ticketing/4.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                            <img src="assets/img/port/E-Ticketing/5.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                            <img src="assets/img/port/E-Ticketing/6.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                            <img src="assets/img/port/E-Ticketing/7.png"
+                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
+                                alt="E-Ticketing">
+                        </div>
                     </div>
-                </div>
-                <div class="mx-2 my-2 mb-4">
-                    <strong style="font-family: 'font-exp'; font-size: 1rem;">[E-Ticketing]</strong>
-                </div>
-                <div class="mx-2 mb-3">
-                    <strong style="font-family: 'font-content'; font-size: 0.8rem;">AAplikasi web E-Ticketing ini dibuat
-                        untuk memudahkan semua orang yang akan berpergian menggunakan bus. Dan sebelum berangkat harus
-                        booking terlebih dahulu.</strong>
-                </div>
-                <hr>
-                <div class="my-1 mb-3">
-                    <center>
+                    <div class="mx-2 my-2 mb-4">
+                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[E-Ticketing]</strong>
+                    </div>
+                    <div class="mx-2 mb-3">
+                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">AAplikasi web E-Ticketing ini
+                            dibuat
+                            untuk memudahkan semua orang yang akan berpergian menggunakan bus. Dan sebelum berangkat
+                            harus
+                            booking terlebih dahulu.</strong>
+                    </div>
+                    <hr>
+                    <div class="my-1 mb-3">
                         <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
                             style="width: 10rem;">Kembali</button>
-                    </center>
+                        <a href="https://github.com/rizalihwan/e-ticketing" class="btn btn-sm"
+                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
+                    </div>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
 
-    <a href="# " class="back-to-top "><i class="icofont-simple-up "></i></a>
+    <a href="javascript::void(0)" class="back-to-top "><i class="icofont-simple-up "></i></a>
 
     <script>
         $(document).ready(function () {
-            $(".preloader").delay(6000).fadeOut();
+            $(".preloader").delay(3000).fadeOut();
         });
     </script>
     <!-- Vendor JS Files -->
