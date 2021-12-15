@@ -2,1521 +2,656 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rizal Ihwan Sulaiman</title>
-    <meta content="a website made with all my heart & love" name="description">
-    <meta content="a website made with all my heart & love" name="keywords">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/fw/laravel.svg" type="image/x-icon">
 
-    <!-- Favicons -->
-    <link href="assets/img/fw/laravel.svg" rel="icon">
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
-    <!-- <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"> -->
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link rel="stylesheet" media="screen" href="css/style.css">
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/icofont.min.css">
+
+    <!--=============== CDN ===============-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <!-- Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <title>Rizal Ihwan Sulaiman</title>
+
     <style>
-        footer {
-            width: 100%;
-            background-color: #040b14;
-            height: 50px;
-            padding: 10px;
+        .my {
+            margin-top: 20px;
         }
 
-        .preloader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 9999;
-            background-color: #fff;
+        .skills-img {
+            width: 70px;
+            height: 70px;
         }
 
-        .preloader .loading {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            font: 14px arial;
+        .skills-container {
+            padding: 15px;
+            padding-bottom: 20px;
         }
 
-        .container-overlay {
+        .skills-title {
+            margin: 10px 0 20px 0;
+        }
+
+        .port-options:hover {
+            cursor: pointer;
+        }
+
+        .tooltip {
             position: relative;
+            display: inline-block;
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.521);
-            transition: background 0.5s ease;
-            background: rgba(0, 0, 0, 0.521);
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            margin-left: -15px;
+            margin-top: -10px;
         }
 
-        .container-overlay:hover .overlay {
-            display: block;
-            background: rgba(0, 0, 0, 0.055);
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
         }
 
-        .portfolio-name {
-            position: absolute;
-            width: 500px;
-            left: 0;
-            top: 120px;
-            font-weight: 700;
-            font-size: 1rem;
-            text-align: center;
+        .certificate-font {
             text-transform: uppercase;
-            color: white;
-            z-index: 1;
-            transition: top .5s ease;
         }
 
-        .container-overlay:hover .portfolio-name {
-            top: 90px;
-            color: white;
+        .project-thumb {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            object-position: top left;
+        }
+
+        .certificate-thumb {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: top;
         }
     </style>
-
-    <script src="assets/vendor/jquery/jquery.min.js "></script>
+</head>
 
 <body>
-    <!-- loading -->
-    <div class="preloader">
-        <div class="loading">
-            <img src="assets/img/loading/infinity-load.gif" width="80">
-        </div>
-    </div>
-    <!-- particles.js container -->
-    <div id="particles-js">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/fw/laravel.svg" alt="header_img" class="nav__logo-img">
+                RIZAL
+            </a>
 
-        <!-- ======= Hero Section ======= -->
-        <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-            <div class="hero-container mx-3" data-aos="fade-in">
-                <h1>Rizal I. Sulaiman,</h1>
-                <p style="font-family: 'font-content';">Web Developer & Backend Developer</p>
-                <hr>
-            </div>
-        </section>
-        <!-- End Hero -->
-    </div>
-    <!-- ======= Mobile nav toggle button ======= -->
-    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="d-flex flex-column">
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
 
-            <div class="profile">
-                <img src="assets/img/hero-bg.jpg" style="object-fit: cover;" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light" style="font-family: 'font-my-name';"><a href="index.html">Rizal Ihwan</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="https://wa.me/+6285770254568" class="instagram"><i class="bx bxl-whatsapp"></i></a>
-                    <a href="https://web.facebook.com/izal.whanz/" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="https://t.me/ihw_me/" class="twitter"><i class="bx bxl-telegram"></i></a>
-                    <a href="https://github.com/rizalihwan" class="google-plus"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/rizal-ihwan-sulaiman/" class="linkedin"><i
-                            class="bx bxl-linkedin"></i></a>
+                    <li class="nav__item">
+                        <a href="#experience" class="nav__link">Experience</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">Portfolio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="https://rizhalun.blogspot.com/" target="_blank" class="nav__link">Blog</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
                 </div>
-                <nav class="nav-menu">
-                    <ul style="font-family: 'font-sidebar';">
-                        <li class="active"><a href="#hero"><span>Home</span></a></li>
-                        <li><a href="#about"><span>Tentang</span></a></li>
-                        <li><a href="#resume"><span>Pengalaman</span></a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Kontak</a></li>
-                    </ul>
-                </nav>
-                <!-- .nav-menu -->
-                <button type="button" class="mobile-nav-toggle d-xl-none"><i
-                        class="icofont-navigation-menu"></i></button>
 
+                <img src="assets/img/fw/laravel.svg" style="width: 50px; padding: 10px;" alt="Nav Img" class="nav__img">
             </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+            </div>
+
+        </nav>
     </header>
-    <!-- End Header -->
 
-
-    <main id="main" style="background-color: #040b14; color: #ffffff;">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2 style="color: #ffffff;">Tentang Saya</h2>
-                    <div class="row mb-5">
-                        <div class="col-lg-4" data-aos="fade-right">
-                            <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_wqypnpu5.json"
-                                background="transparent" speed="1"
-                                style="width: 100%; height: 220px; margin-bottom: 30px;" loop autoplay></lottie-player>
-                        </div>
-                        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                            <p style="font-size: 20px; font-family: 'font-desc';">Perkenalkan nama saya <b>Rizal Ihwan
-                                    Sulaiman</b>, yang saat ini sedang bergelut di dunia programming terutama pada
-                                bagian web development. Saya sangat familiar dengan framework <b>Laravel/Lumen</b> dan
-                                baik
-                                dalam mengoperasikan
-                                database. Saat ini saya sedang menyelesaikan project - project freelance dan pernah
-                                terlibat dalam project magang di PT Laskar Teknologi Mulia(CyberLabs). Saya sangat
-                                Menyukai tantangan dan selalu mempelajari hal -
-                                hal baru, serta menerima project aplikasi berdasarkan permintaan client.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row mb-5">
-                        <div class="col text-center">
-                            <p style="font-size: 30px; font-weight: bold;">Apa Yang Saya Buat?</p>
-                        </div>
-                    </div>
-                    <!-- ======= Services Section ======= -->
-                    <div class="services">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up">
-                                    <div class="icon"><i class="icofont-computer"></i></div>
-                                    <h4 class="title">Web Development</h4>
-                                    <p class="description" style="font-family: 'font-desc';"><b>Melayani pengembangan
-                                            website dari awal yang bersifat Dinamis / Statis, mulai dari tampilan depan
-                                            sampai integrasi backend & database.</b></p>
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home container" id="home">
+            <div class="swiper home-swiper">
+                <div class="swiper-wrapper">
+                    <!-- HOME SLIDER 1 -->
+                    <section>
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <div class="home__details-img my">
+                                    <h4 class="home__details-title">Hi It's Me </h4>
+                                    <span class="home__details-subtitle">“Rizal Ihwan Sulaiman”</span>
                                 </div>
-                                <div class="col-lg-6 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="icon"><i class="icofont-code"></i></div>
-                                    <h4 class="title">Backend Development</h4>
-                                    <p class="description" style="font-family: 'font-desc';"><b>Membuat RestfullAPI
-                                            menggunakan framework Laravel/Lumen.</b></p>
-                                </div>
+
+                                <img src="assets/img/profile-pic.png" alt="Profile Image" style="margin-top: 40px;"
+                                    class="home__img">
+                                <div class="home__indicator" style="margin-left: 20px;"></div>
+
                             </div>
 
-                        </div>
-                    </div>
-                    <!-- End Services Section -->
-                </div>
+                            <div class="home__data">
+                                <h3 class="home__title">Backend Developer</h3>
+                                <!-- <p class="home__description"><b></b></p> -->
+                                <p class="home__description">The quality of a person is seen from his commitment to
+                                    succeed in whatever field he pursues.</p>
 
+                                <div class="home__buttons">
+                                    <a href="#contact" class="button">Contact Me <i class="fa fa-arrow-right"
+                                            style="margin-left: 10px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
-        <!-- End About Section -->
 
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills section-bg" style="background-color: #040b14;">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2 style="color: #ffffff;">Skills</h2>
+        <!--==================== ABOUT ====================-->
+        <section class="section about" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">About Me</h2>
+                    <hr style="margin-bottom: 50px;">
+                    <p class="about__description">Introducing my name is Rizal Ihwan Sulaiman, who is currently
+                        struggling in the programming world, especially in the web
+                        development section. I am very familiar with Laravel/Lumen framework and good at
+                        operating
+                        databases. I really like
+                        challenges and always learn new things, and accept application projects based on client
+                        requests.
+                    </p>
+                    <a download="CV - Rizal Ihwan Sulaiman.pdf" href="assets/cv/CV_Rizal Ihwan Sulaiman.pdf"
+                        class="button" style="background-color: #00af91; color: white;">CV Profile<i class="fa fa-save"
+                            style="margin-left: 10px;"></i></a>
                 </div>
 
-                <div class="row skills-content">
-
-                    <div class="col-md-12" data-aos="fade-up">
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/php.svg" style="width: 50px; height: 50px;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">PHP</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/laravel.svg" style="width: 50px; height: 50px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">Laravel</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/lumen.svg" style="width: 25px; height: 50px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">Lumen</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/bustrep.svg" style="width: 50px; height: 50px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">Bootstrap</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/html.svg" style="width: 50px; height: 50px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">HTML</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/js.svg" style="width: 50px; height: 50px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">Javascript</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/css.svg" style="width: 50px; height: 50px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">Css</small></center>
-                        </figure>
-                        <!-- <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/jquery.svg"
-                                style="width: 50px; height: 50px; background-color: white; object-position: center; padding: 3px;"
-                                class="figure-img img-fluid rounded" alt="...">
-                            <center><small style="font-family: 'font-content';">jQuery Ajax</small></center>
-                        </figure> -->
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/mysql.svg" style="width: 50px; height: 50px; object-fit: cover; "
-                                class="figure-img img-fluid rounded " alt="... ">
-                            <center><small style="font-family: 'font-content'; ">MySQL</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/posgre.png" style="width: 50px; height: 50px; object-fit: cover; "
-                                class="figure-img img-fluid rounded " alt="... ">
-                            <center><small style="font-family: 'font-content'; ">PostgreSQL</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/github.svg" style="width: 50px; height: 50px; object-fit: cover; "
-                                class="figure-img img-fluid rounded " alt="... ">
-                            <center><small style="font-family: 'font-content'; ">Git & Github</small></center>
-                        </figure>
-                        <!-- <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/fw/linux.png" style="width: 50px; height: 50px; object-fit: cover; "
-                                class="figure-img img-fluid rounded " alt="... ">
-                            <center><small style="font-family: 'font-content'; ">Linux</small></center>
-                        </figure> -->
-                    </div>
-                </div>
-
+                <img src="assets/img/playcode.png" style="width: 350px;" alt="AboutImg" class="about__img">
             </div>
         </section>
-        <!-- End Skills Section -->
 
-        <!-- ======= experience Section ======= -->
-        <section id="resume" class="resume ">
-            <div class="container ">
-
-                <div class="section-title ">
-                    <h2 style="color: #ffffff; ">Pengalaman</h2>
-                </div>
-
-                <div class="row ">
-                    <div class="col-lg-6 " data-aos="fade-up ">
-                        <h3 class="resume-title " style="color: #ffffff; ">Edukasi</h3>
-                        <!-- <div class="resume-item ">
-                            <h4 style="color: #ffffff; font-family: 'font-exp'; ">Sekolah Dasar <u>Sdn Caringin 03</u>
-                            </h4>
-                            <em style="color: #ffffff; font-family: 'font-content'; ">2008 - 2014</em>
-                            <p style=" font-family: 'font-content'; ">Pada jenjang pendidikan SD saya di Sdn Caringin 03
-                                selama 6 tahun yang bertempat di caringin kabupaten bogor cimande hilir.</p>
-                        </div> -->
-                        <div class="resume-item ">
-                            <h4 style="color: #ffffff; font-family: 'font-exp'; ">Sekolah Menengah Pertama <u>Smpn 01
-                                    Caringin</u></h4>
-                            <em style="color: #ffffff; font-family: 'font-content'; ">2015 - 2017</em>
-                            <p style="font-family: 'font-content'; ">Kemudian jenjang pendidikan SMP ini saya memulai di
-                                SMPN 01 Caringin selama 3 tahun.</p>
-                        </div>
-                        <div class="resume-item ">
-                            <h4 style="color: #ffffff; font-family: 'font-exp'; ">Rekayasa Perangkat Lunak di <u>Smk
-                                    Wikrama Bogor</u></h4>
-                            <em style="color: #ffffff; font-family: 'font-content'; ">2018 - 2021</em>
-                            <p style="font-family: 'font-content'; ">Nah pada jenjang pendidikan SMK ini saya mengambil
-                                jurusan RPL(Rekayasa Perangkat Lunak) selama 3 tahun.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 " data-aos="fade-up " data-aos-delay="100 ">
-                        <h3 class="resume-title " style="color: #ffffff; ">Pengalaman Bekerja</h3>
-                        <div class="resume-item ">
-                            <h4 style="color: #ffffff; font-family: 'font-exp'; ">Magang <u>PT Laskar Teknologi
-                                    Mulia(CyberLabs)</u></h4>
-                            <em style="color: #ffffff; font-family: 'font-content'; ">Oktober 2020 - Desember 2020</em>
-                            <ul style="font-family: 'font-content'; ">
-                                <li>Tugas & Pekerjaan:</li>
-                                <li>&middot; Membangun Aplikasi Web dengan menggunakan framework Laravel.</li>
-                                <li>&middot; Membuat Artikel di Blogger. </li>
-                            </ul>
-                        </div>
-                        <div class="resume-item ">
-                            <h4 style="color: #ffffff; font-family: 'font-exp'; ">Web Developer Freelance</u>
-                            </h4>
-                            <em style="color: #ffffff; font-family: 'font-content'; ">September 2020 - Sekarang</em>
-                            <ul style="font-family: 'font-content'; ">
-                                <li>Tugas & Pekerjaan:</li>
-                                <li>&middot; Membangun Aplikasi Web & Membuat RestfullAPI dengan menggunakan framework
-                                    Laravel.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End Resume Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio section-bg " style="background-color: #040b14;">
-            <div class="container ">
-                <div class="section-title ">
-                    <h2 style="color: white;">Portfolio</h2>
-                    <hr>
-                    <b style=" font-size: 15px; font-family: 'font-content'; ">&middot; Projects</b>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up " data-aos-delay="100 ">
-
+        <!--==================== CATEGORY ====================-->
+        <section class="section discount">
+            <div class="discount__container container grid" style="padding: 10px;">
+                <div class="discount__data">
+                    <h2 class="discount__title" style="margin-top: 30px;">Services</h2>
                     <center>
-                        <!-- background-color: #0f4c75;  -->
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#akuntingModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/akunting/1.png" alt="Akunting"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Aplikasi
-                                                Keuangan
-                                                TNI
-                                                AD</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#perpusModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/perpus/2.png" alt="Perpustakaan"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Aplikasi
-                                                Perpustakaan</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#tropisModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/tropisi/3.png" alt="Tropisianimal company profile"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Tropisianimal
-                                                Company</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#absiswaModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/absensiswa/8.png" alt="Absensi"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Absensi
-                                                Digital
-                                                Siswa</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#supervisorModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/Supervisor Digital/3.png" alt="Supervisor Digital"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Supervisor
-                                                Digital</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#bordirModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/BordirKuy profile/2.png" alt="Bordirollshop Landing
-                                                Page"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Bordirollshop
-                                                Landing Page</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#posModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/POS/4.png" alt="Point Of Sale"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Point
-                                                Of Sale</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#ppdbModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/Ppdb Online/1.png" alt="PPDB Online"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">PPDB
-                                                Online</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#absensiModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/absensi/4.png" alt="Absensi Karyawan"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Absensi
-                                                Karyawan</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#covidModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/Covid_RiskTest/1.png" alt="Covid Risk Test"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Covid
-                                                Risk Test</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#silsilahModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/silsilah/1.png" alt="Silsilah Keluarga"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Silsilah
-                                                Keluarga</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#simrsModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/simrs/2.png" alt="SIMRS"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">SIMRS</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#agendaModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/Crud Laravel (AgendaDigital)/1.png"
-                                                alt="Agenda List"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">Agenda
-                                                List</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 portfolio-item">
-                            <a href="#" data-toggle="modal" data-target="#ticketingModal" title="Detail">
-                                <div class="card p-1" style="width: 100%; height: 100%; background: transparent;">
-                                    <div class="container-overlay">
-                                        <center>
-                                            <img src="assets/img/port/E-Ticketing/2.png" alt="E-Ticketing"
-                                                style="width: 100%; height: 260px; object-position: top; object-fit: cover; " />
-                                            <label class="portfolio-name text-left"
-                                                style="font-family: 'font-content'; margin-left: 20px; margin-top: -20px;">E-Ticketing</label>
-                                        </center>
-                                        <div class="overlay"></div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <hr style="margin-bottom: 50px; width: 250px;">
                     </center>
+                    <b style="color: white;">
+                        [Backend Development]
+                    </b>
+                    <p style="margin-bottom: 20px;">
+                        Creating RestfullAPI using Laravel/Lumen framework.
+                    </p>
+                    <b style="color: white;">
+                        [Web Development]
+                    </b>
+                    <p>
+                        Serving website development from scratch that is Dynamic / Static,
+                    </p>
+                    <p style="margin-bottom: 30px;">
+                        from front view to backend & database integration.
+                    </p>
                 </div>
-            </div>
-            <div class="container ">
-                <hr>
-                <div class="section-title ">
-                    <b style="font-size: 15px; font-family: 'font-content'; ">&middot; Sertifikat</b>
-                </div>
-                <div class="col-md-12" data-aos="fade-up">
-                    <center>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/port/Sertifikat/ciberlab.png"
-                                style="width: 100%; height: 200px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="CyberLabs">
-                            <center><small style="font-family: 'font-content';">CyberLabs(Magang)</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/port/Sertifikat/1.jpeg"
-                                style="width: 100%; height: 200px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="Html">
-                            <center><small style="font-family: 'font-content';">Html Css dasar(Kursus)</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/port/Sertifikat/2.png"
-                                style="width: 100%; height: 200px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="Github">
-                            <center><small style="font-family: 'font-content';">Github(Kursus)</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/port/Sertifikat/3.jpeg"
-                                style="width: 100%; height: 200px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="PostgreSQL">
-                            <center><small style="font-family: 'font-content';">PostgreSQL(Kursus)</small></center>
-                        </figure>
-                        <figure class="figure mx-3 mb-3">
-                            <img src="assets/img/port/Sertifikat/4.png"
-                                style="width: 100%; height: 200px; object-fit: cover;"
-                                class="figure-img img-fluid rounded" alt="Javascript">
-                            <center><small style="font-family: 'font-content';">Javascript Async(Kursus)</small>
-                            </center>
-                        </figure>
-                    </center>
-                </div>
-                <hr>
+
+                <img src="assets/img/be.png" style="width: 130px; margin-bottom: 20px;" alt="Service"
+                    class="discount__img">
             </div>
         </section>
-        <!-- End Portfolio Section -->
 
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact ">
-            <div class="container ">
-
-                <div class="section-title ">
-                    <h2 style="color: #ffffff; ">Kontak</h2>
+        <!--==================== TRICK OR TREAT ====================-->
+        <section class="section trick">
+            <h2 class="section__title">Skills</h2>
+            <center>
+                <hr style="margin-bottom: 50px; width: 250px;">
+            </center>
+            <div class="trick__container container grid">
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">PHP</span>
+                    <img src="assets/img/fw/php.svg" alt="skill_img" class="skills-img trick__img">
                 </div>
 
-                <div class="row" data-aos="fade-in ">
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">Laravel</span>
+                    <img src="assets/img/fw/laravel.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
-                    <div class="col-lg-12 d-flex align-items-stretch ">
-                        <div class="info " style="background-color: #040b14 ">
-                            <div class="address ">
-                                <i class="icofont-google-map "></i>
-                                <h4 style="color: #ffffff; ">Alamat</h4>
-                                <p style="color: #ffffff; font-family: 'font-content'; ">Kp Tenggek, Rt 04/Rw 01, Desa
-                                    Cimande Hilir, Kecamatan Caringin, Kabupaten Bogor, 16730</p>
-                            </div>
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">Lumen</span>
+                    <img src="assets/img/fw/lumen.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
-                            <div class="email ">
-                                <i class="icofont-envelope "></i>
-                                <h4 style="color: #ffffff; ">Email</h4>
-                                <p style="color: #ffffff; font-family: 'font-content'; ">rizalihwan94@gmail.com</p>
-                            </div>
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">Bootstrap</span>
+                    <img src="assets/img/fw/bustrep.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
-                            <div class="phone ">
-                                <i class="icofont-phone "></i>
-                                <h4 style="color: #ffffff; ">Ponsel</h4>
-                                <p style="color: #ffffff; font-family: 'font-content'; ">085770254568 (Whatsapp /
-                                    Seluler)</p>
-                            </div>
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">HTML</span>
+                    <img src="assets/img/fw/html.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
-                            <div class="address ">
-                                <i class="icofont-telegram "></i>
-                                <h4 style="color: #ffffff; ">Telegram</h4>
-                                <p style="color: #ffffff; font-family: 'font-content'; ">
-                                    <a href="https://t.me/ihw_me/ ">https://t.me/ihw_me/</a>
-                                </p>
-                            </div>
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">Javascript</span>
+                    <img src="assets/img/fw/js.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
-                            <div class="address ">
-                                <i class="icofont-github "></i>
-                                <h4 style="color: #ffffff; ">Github</h4>
-                                <p style="color: #ffffff; font-family: 'font-content'; ">
-                                    <a href="https://github.com/rizalihwan ">https://github.com/rizalihwan</a>
-                                </p>
-                            </div>
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">Css</span>
+                    <img src="assets/img/fw/css.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
-                            <div class="address ">
-                                <i class="icofont-instagram "></i>
-                                <h4 style="color: #ffffff; ">Instagram</h4>
-                                <p style="color: #ffffff; font-family: 'font-content'; ">
-                                    <a
-                                        href="https://www.instagram.com/rizalihwan94_/ ">https://www.instagram.com/rizalihwan94_/</a>
-                                </p>
-                            </div>
-                        </div>
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">MySQL</span>
+                    <img src="assets/img/fw/mysql.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
 
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">PostgreSQL</span>
+                    <img src="assets/img/fw/posgre.png" alt="skill_img" class="skills-img trick__img">
+                </div>
+
+                <div class="trick__content skills-container">
+                    <span class="trick__price skills-title">Git & Github</span>
+                    <img src="assets/img/fw/github.svg" alt="skill_img" class="skills-img trick__img">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== EXPERIENCE ====================-->
+        <section class="section discount" id="experience">
+            <div class="discount__container container grid" style="padding: 20px;">
+                <div>
+                    <h2 class="discount__title" style="margin-top: 30px;">Experience</h2>
+                    <hr style="margin-bottom: 50px; width: 250px;">
+                    <div style="margin-bottom: 50px;">
+                        <b style="color: white;">
+                            <h3 style="margin-bottom: 10px;">
+                                #Education
+                            </h3>
+                            &middot; SMK WIKRAMA BOGOR
+                            <br>
+                            [2018 - 2021]
+                        </b>
+                        <p style="margin: 10px 0 20px 0;">
+                            Learning the basics of programming. Starting with the algorithm,
+                            <br>
+                            flowchart, then programming languages like C++, C#, Vb.net, Ruby,
+                            <br>
+                            Java, Php & Javascript.
+                        </p>
                     </div>
 
-
+                    <div>
+                        <b style="color: white;">
+                            <h3 style="margin-bottom: 10px;">
+                                #Work
+                            </h3>
+                            &middot; BACKEND DEVELOPER PT. Indonesia Comnets Plus (ICON+)
+                            <br>
+                            [August 2021 - Now]
+                        </b>
+                        <p style="margin: 10px 0 30px 0;">
+                            Creating backend services (Restfull API) for mobile and web apps.
+                        </p>
+                        <b style="color: white;">
+                            &middot; WEB DEVELOPER FREELANCER
+                            <br>
+                            [September 2020 - Now]
+                        </b>
+                        <p style="margin: 10px 0 30px 0;">
+                            Build Web Application & Create RestfullAPI using Laravel framework.
+                        </p>
+                        <b style="color: white;">
+                            &middot; INTERNSHIP PT. Laskar Teknologi Mulia (CYBERLABS)
+                            <br>
+                            [October 2020 - December 2020]
+                        </b>
+                        <p style="margin: 10px 0 20px 0;">
+                            - Building Company Profile Applications using the Laravel framework,
+                            <br>
+                            - Creating Articles on Blogger.
+                        </p>
+                    </div>
                 </div>
-
             </div>
         </section>
-        <!-- End Contact Section -->
+
+        <!--==================== PORTFOLIO ====================-->
+        <section class="section new" id="portfolio">
+            <h2 class="section__title">Portfolio</h2>
+            <center>
+                <hr style="margin-bottom: 50px; width: 250px;">
+            </center>
+            <center style="margin-bottom: 10px;">
+                <h4>#Projects</h4>
+            </center>
+            <div class="new__container container" style="margin-bottom: 30px;">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper port-options">
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/akunting/1.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">Aplikasi Keuangan TNI AD</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/perpus/2.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">Aplikasi Perpustakaan</h3>
+                            <span class="new__subtitle">[Study Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/POS/9.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">Point Of Sale</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/tropisi/3.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">Company Profile</h3>
+                            <span class="new__subtitle">[Intern Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/absensiswa/2.png" alt="project_img"
+                                class="new__img project-thumb">
+                            <h3 class="new__title">Digital Presence</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/Supervisor Digital/3.png" alt="project_img"
+                                class="new__img project-thumb">
+                            <h3 class="new__title">Supervisor Digital</h3>
+                            <span class="new__subtitle">[Study Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/Ppdb Online/1.png" alt="project_img"
+                                class="new__img project-thumb">
+                            <h3 class="new__title">PPDB Online</h3>
+                            <span class="new__subtitle">[Study Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/Covid_RiskTest/1.png" alt="project_img"
+                                class="new__img project-thumb">
+                            <h3 class="new__title">Covid Risk Test</h3>
+                            <span class="new__subtitle">[Study Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/simrs/2.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">SIMRS</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/E-Ticketing/2.png" alt="project_img"
+                                class="new__img project-thumb">
+                            <h3 class="new__title">E-Ticketing</h3>
+                            <span class="new__subtitle">[Study Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/absensi/4.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">Employee Presence</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/BordirKuy profile/1.png" alt="project_img"
+                                class="new__img project-thumb">
+                            <h3 class="new__title">B-O Landing Page</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/simrayon/1.png" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">SIM Rayon</h3>
+                            <span class="new__subtitle">[Study Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/etwpad/1.PNG" alt="project_img" class="new__img project-thumb">
+                            <h3 class="new__title">eKPR TWPAD</h3>
+                            <span class="new__subtitle">[Freelancer Project]</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <center style="margin-bottom: 10px;">
+                <h4>#Certificates</h4>
+            </center>
+            <div class="new__container container">
+                <div class="swiper new-swiper">
+                    <div class="swiper-wrapper port-options">
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/certificate/3.jpeg" alt="certificate"
+                                class="new__img certificate-thumb">
+                            <span class="new__subtitle certificate-font">menguasai PostgreSQL</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/certificate/4.png" alt="certificate"
+                                class="new__img certificate-thumb">
+                            <span class="new__subtitle certificate-font">javascript async</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/certificate/1.jpeg" alt="certificate"
+                                class="new__img certificate-thumb">
+                            <span class="new__subtitle certificate-font">html css fundamental</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/certificate/ciberlab.png" alt="certificate"
+                                class="new__img certificate-thumb">
+                            <span class="new__subtitle certificate-font">cyberlabs magang</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/certificate/5.png" alt="certificate"
+                                class="new__img certificate-thumb">
+                            <span class="new__subtitle certificate-font">.Net Conf 2019</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="new__content swiper-slide" style="padding: 20px;">
+                            <img src="assets/img/port/certificate/git_progate.png" alt="certificate"
+                                class="new__img certificate-thumb">
+                            <span class="new__subtitle certificate-font">kursus git</span>
+
+                            <button class="button new__button" style="background-color: transparent; color: white;">
+                                <i class="fa fa-angle-double-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
-    <footer>
-        <div class="text-secondary text-center offset-0">
-            <b style="text-decoration: none; color: white; font-family: 'font-desc'; ">Copyright &copy; 2020 Rizal
-                Ihwan</b>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <center>
+            <hr style="margin-bottom: 100px; width: 250px;">
+        </center>
+        <div class="footer__container container grid" style="margin-bottom: 200px;">
+            <div class="footer__content">
+                <h3 class="footer__title">Social Media</h3>
+
+                <div class="footer__social">
+                    <a href="https://web.facebook.com/izal.whanz/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/rizalihwan94_/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rizal-ihwan-sulaiman/" target="_blank"
+                        class="footer__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Discussion</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <i class="icofont-envelope"></i> rizalihwan94@gmail.com
+                    </li>
+                    <li>
+                        <i class="icofont-whatsapp"></i> +6285770254568 (Whatsapp / Mobile)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Address</h3>
+
+                <ul class="footer__links">
+                    <li>
+                        <i class="icofont-google-map"></i> Bogor, West Java
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">Git Repository</h3>
+
+                <div class="footer__social">
+                    <a href="https://github.com/rizalihwan" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://gitlab.com/rizalihwan" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-gitlab'></i>
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <span class="footer__copy">&#169; Rizal. All right reserved</span>
+
+        <!-- <img src="assets/img/footer1-img.png" alt="" class="footer__img-one">
+        <img src="assets/img/footer2-img.png" alt="" class="footer__img-two"> -->
     </footer>
-    <!-- End #main -->
 
-    <!-- Portfolio Modal -->
-    <!-- akunting -->
-    <div class="modal fade" id="akuntingModal" tabindex="-1" aria-labelledby="akuntingModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/akunting/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="akunting">
-                            <img src="assets/img/port/akunting/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="akunting">
-                            <img src="assets/img/port/akunting/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="akunting">
-                            <img src="assets/img/port/akunting/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="akunting">
-                            <img src="assets/img/port/akunting/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="akunting">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Aplikasi Keuangan/Akunting TNI
-                            AD]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website yang dibuat untuk
-                            memudahkan Transaksi seputar Akuntansi dan mencatat laporan - laporan berdasarkan module
-                            seperti Laba Rugi, Neraca, Jurnal Umum dll.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <!-- <center> -->
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <!-- </center> -->
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- perpus -->
-    <div class="modal fade" id="perpusModal" tabindex="-1" aria-labelledby="perpusModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/perpus/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/7.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/8.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/9.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                            <img src="assets/img/port/perpus/10.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="perpus">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Perpustakaan]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website yang dibuat untuk
-                            memudahkan
-                            peminjaman & pengembalian Buku di Perpustakaan. Dan sekaligus project ini saya buat open
-                            source
-                            untuk dipelajari untuk semua orang dan sudah tersedia di github saya.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/perpustakaan" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- tropisianimal -->
-    <div class="modal fade" id="tropisModal" tabindex="-1" aria-labelledby="tropisModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/tropisi/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/7.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/8.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/9.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/10.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/11.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/12.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/13.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/14.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                            <img src="assets/img/port/tropisi/15.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="tropisi">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Tropisianimal Company
-                            Profile]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website Tropisianimal company
-                            profile ini dibuat untuk lebih memperkenalkan budidaya hewan yang di urusi oleh perusahaan
-                            tropisianimal agar lebih banyak dikenal orang. Dan ini merupakan salah satu project magang
-                            saya
-                            di cyberlabs.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/tropisi-animal" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- supervisor -->
-    <div class="modal fade" id="supervisorModal" tabindex="-1" aria-labelledby="supervisorModalLabel"
-        data-toggle="modal" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/Supervisor Digital/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="supervisor">
-                            <img src="assets/img/port/Supervisor Digital/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="supervisor">
-                            <img src="assets/img/port/Supervisor Digital/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="supervisor">
-                            <img src="assets/img/port/Supervisor Digital/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="supervisor">
-                            <img src="assets/img/port/Supervisor Digital/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="supervisor">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Supervisor Digital]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Aplikasi Supervisor Digital ini
-                            dibuat untuk menghandle sistem pembelajaran sekolah secara online sehingga guru dapat
-                            memberi
-                            tugas secara mudah dan efektif. Dan sudah dilengkapi fitur menilai tugas yang diberikan oleh
-                            guru buat role supervisornya & fitur laporan untuk dilihat oleh kepala sekolah, dan masih
-                            banyak
-                            lagi fiturnya.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/supervisor-digital" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- bordir -->
-    <div class="modal fade" id="bordirModal" tabindex="-1" aria-labelledby="bordirModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/BordirKuy profile/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="bordir">
-                            <img src="assets/img/port/BordirKuy profile/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="bordir">
-                            <img src="assets/img/port/BordirKuy profile/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="bordir">
-                            <img src="assets/img/port/BordirKuy profile/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="bordir">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Bordirollshop Landing Page]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website Bordirollshop Landing
-                            Page
-                            ini dibuat untuk lebih memperkenalkan jasa bordir nya agar dapat semua orang lihat secara
-                            mudah
-                            dimanapun dan kapanpun.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/bordir-ollshop" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- pos -->
-    <div class="modal fade" id="posModal" tabindex="-1" aria-labelledby="posModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/POS/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/7.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/8.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                            <img src="assets/img/port/POS/9.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="pos">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Point Of Sale]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Sesuai dengan namanya, sistem
-                            POS
-                            (Point of Sale) adalah titik penjualan di mana transaksi penjualan diselesaikan. Sistem ini
-                            juga
-                            sering disebut sebagai mesin kasir (cash register). Sistem ini pada dasarnya dibuat untuk
-                            mempermudah proses penjualan (atau pembelian) dalam bisnis retail, sehingga pelanggan dapat
-                            melakukan pembayaran dengan lebih cepat.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/point-of-sale" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- ppdb -->
-    <div class="modal fade" id="ppdbModal" tabindex="-1" aria-labelledby="ppdbModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/Ppdb Online/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Ppdb Online">
-                            <img src="assets/img/port/Ppdb Online/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Ppdb Online">
-                            <img src="assets/img/port/Ppdb Online/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Ppdb Online">
-                            <img src="assets/img/port/Ppdb Online/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Ppdb Online">
-                            <img src="assets/img/port/Ppdb Online/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Ppdb Online">
-                            <img src="assets/img/port/Ppdb Online/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Ppdb Online">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[PPDB Online]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">PPDB Online merupakan website
-                            sekolah yang dibuat untuk memudahkan penerimaan siswa/i baru secara digital. Dan didalamnya
-                            terdapat informasi dan konten - konten mengenai sekolah tersebut.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/LARAVEL-PPDBOnline" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- sisliah -->
-    <div class="modal fade" id="silsilahModal" tabindex="-1" aria-labelledby="silsilahModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/silsilah/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="silsilah">
-                            <img src="assets/img/port/silsilah/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="silsilah">
-                            <img src="assets/img/port/silsilah/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="silsilah">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Silsilah Keluarga]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Silsilah Keluarga merupakan
-                            website
-                            yang dibuat - buat saja untuk menentukan silsilah dalam sebuah keluarga, dan project ini
-                            saya
-                            buat untuk melatih logika if conditional dan pematangan relational database saya.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/silsilah" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- absensi siswa -->
-    <div class="modal fade" id="absiswaModal" tabindex="-1" aria-labelledby="absiswaModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/absensiswa/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: bottom left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/7.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                            <img src="assets/img/port/absensiswa/8.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="absensi siswa">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Absensi Digital Siswa]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website ini dibuat untuk
-                            membantu
-                            guru dalam proses pengabsenan siswa secara digital, dan terdaftar fitur selfi menggunakan
-                            camera
-                            ketika siswa akan melakukan absen, dan ketika absen akan terekap otomatis tanggal dan jam
-                            berapa
-                            siswa tersebut melakukan absensi.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- absensi karyawan -->
-    <div class="modal fade" id="absensiModal" tabindex="-1" aria-labelledby="absensiModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/absensi/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Absensi Karyawan">
-                            <img src="assets/img/port/absensi/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Absensi Karyawan">
-                            <img src="assets/img/port/absensi/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Absensi Karyawan">
-                            <img src="assets/img/port/absensi/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Absensi Karyawan">
-                            <img src="assets/img/port/absensi/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Absensi Karyawan">
-                            <img src="assets/img/port/absensi/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Absensi Karyawan">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Absensi Karyawan]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Seperti namanya yaitu absensi
-                            jadi
-                            aplikasi website ini dibuat untuk memudahkan absensi karyawan setiap hari nya, dan terdapat
-                            fitur generate laporan yang sangat penting untuk di akses oleh Direktur.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/absensi-karyawan" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- covid -->
-    <div class="modal fade" id="covidModal" tabindex="-1" aria-labelledby="covidModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/Covid_RiskTest/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Covid Risk Test">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Covid Risk Test]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Website ini dibuat untuk
-                            mengetahui
-                            seberapa jauh anda terkena dampak resiko virus corona.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/covid-risk-test" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- simrs -->
-    <div class="modal fade" id="simrsModal" tabindex="-1" aria-labelledby="simrsModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/simrs/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/7.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/8.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                            <img src="assets/img/port/simrs/9.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Sistem Management RS">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Sistem Informasi Management Rumah
-                            Sakit]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">SIMRS ini dibuat untuk
-                            memudahkan
-                            dan memanajemen sistem informasi yang ada di Rumah Sakit.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/simrs" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- agenda -->
-    <div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/Crud Laravel (AgendaDigital)/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Agenda List">
-                            <img src="assets/img/port/Crud Laravel (AgendaDigital)/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="Agenda List">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[Agenda List]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">Aplikasi website yang dibuat
-                            untuk
-                            mencatat agenda secara digital.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/agenda-digital" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
-    <!-- ticketing -->
-    <div class="modal fade" id="ticketingModal" tabindex="-1" aria-labelledby="ticketingModalLabel" data-toggle="modal"
-        data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog" role="document">
-            <center>
-                <div class="modal-content" style="background: linear-gradient(#040b14, #30475e); color: white;">
-                    <div class="my-2 mt-3">
-                        <strong style="font-size: 1.4rem; font-family: 'font-content';" class="modal-title"
-                            id="modal-title">Detail Portfolio</strong>
-                    </div>
-                    <hr>
-                    <div class="modal-body my-2" id="modal-body">
-                        <div class="owl-carousel portfolio-details-carousel">
-                            <img src="assets/img/port/E-Ticketing/1.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                            <img src="assets/img/port/E-Ticketing/2.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                            <img src="assets/img/port/E-Ticketing/3.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                            <img src="assets/img/port/E-Ticketing/4.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                            <img src="assets/img/port/E-Ticketing/5.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                            <img src="assets/img/port/E-Ticketing/6.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                            <img src="assets/img/port/E-Ticketing/7.png"
-                                style="width: 100%; height: 220px; object-fit: cover; object-position: top left;"
-                                alt="E-Ticketing">
-                        </div>
-                    </div>
-                    <div class="mx-2 my-2 mb-4">
-                        <strong style="font-family: 'font-exp'; font-size: 1rem;">[E-Ticketing]</strong>
-                    </div>
-                    <div class="mx-2 mb-3">
-                        <strong style="font-family: 'font-content'; font-size: 0.8rem;">AAplikasi web E-Ticketing ini
-                            dibuat
-                            untuk memudahkan semua orang yang akan berpergian menggunakan bus. Dan sebelum berangkat
-                            harus
-                            booking terlebih dahulu.</strong>
-                    </div>
-                    <hr>
-                    <div class="my-1 mb-3">
-                        <button type="button " class="btn btn-danger btn-sm" data-dismiss="modal"
-                            style="width: 10rem;">Kembali</button>
-                        <a href="https://github.com/rizalihwan/e-ticketing" class="btn btn-sm"
-                            style="background-color: #00af91; color: white;" title="Code"><i class="fa fa-code"></i></a>
-                    </div>
-                </div>
-            </center>
-        </div>
-    </div>
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
 
-    <a href="javascript::void(0)" class="back-to-top "><i class="icofont-simple-up "></i></a>
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(".preloader").delay(6000).fadeOut();
-        });
-    </script>
-    <!-- Vendor JS Files -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js "></script>
-    <script src="js/particles.js "></script>
-    <script src="js/app.js "></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js "></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js "></script>
-    <script src="assets/vendor/counterup/counterup.min.js "></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js "></script>
-    <script src="assets/vendor/venobox/venobox.min.js "></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js "></script>
-    <script src="assets/vendor/typed.js/typed.min.js "></script>
-    <script src="assets/vendor/aos/aos.js "></script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js "></script>
-
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
